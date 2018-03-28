@@ -7,9 +7,12 @@
 <style lang="scss" scoped>
 header {
   background: $clr-w-d;
-  padding: 2rem 1rem;
   a {
     color: $clr-b-l;
+  }
+  h1 {
+    margin: 0.5rem;
+    font-size: 1rem;
   }
 }
 </style>

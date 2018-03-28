@@ -1,3 +1,9 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
 @font-face {
   font-family: 'Yu Gothic';
   src: local('Yu Gothic Medium');
@@ -78,7 +84,6 @@ h6 {
 }
 
 body {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
   color: $clr-b;

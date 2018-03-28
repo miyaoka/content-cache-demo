@@ -1,6 +1,6 @@
 <template>
   <div>
-    <AppHeader/>
+    <AppHeader class="header"/>
     <div class="main">
       <nuxt/>
     </div>
@@ -29,7 +29,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+$header-height: 2rem;
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: $header-height;
+  overflow: hidden;
+}
 .main {
   margin: 1rem;
+  margin-top: calc(2rem + #{$header-height};
 }
 </style>
