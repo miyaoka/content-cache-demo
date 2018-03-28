@@ -1,5 +1,4 @@
 export default async ({ app, store }, inject) => {
-  // store.commit('setContents', data)
   let data = []
   let loaded = false
 
