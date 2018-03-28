@@ -1,8 +1,21 @@
 <template>
   <header>
-    <h1><nuxt-link to="/">home</nuxt-link></h1>
+    <h1><nuxt-link to="/">[{{repoOwner}} / {{repoName}}]</nuxt-link></h1>
   </header>
 </template>
+
+<script>
+export default {
+  computed: {
+    repoOwner() {
+      return process.env.GH_REPO_OWNER
+    },
+    repoName() {
+      return process.env.GH_REPO_NAME
+    }
+  }
+}
+</script>
 
 <style lang="scss" scoped>
 header {
