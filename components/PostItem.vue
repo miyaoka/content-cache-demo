@@ -6,7 +6,7 @@
         :href="post.url"
         target="_blank"
         rel="noopener"
-      >[issue]</a>
+      >[issue link]</a>
     </header>
     <div class="body">
       <div ref="marked">

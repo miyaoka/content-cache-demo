@@ -9,7 +9,7 @@
             id: prev.number
           }
         }"
-      >prev</nuxt-link>
+      >←newer</nuxt-link>
       <nuxt-link
         v-if="next"
         class="next"
@@ -19,9 +19,9 @@
             id: next.number
           }
         }"
-      >next</nuxt-link>
+      >older→</nuxt-link>
     </nav>
-    <h3 class="title">Post</h3>
+    <h3 class="title">Issue: {{data.number}}</h3>
     <PostItem
       :post="data"
     />

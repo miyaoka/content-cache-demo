@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h3 class="title">List</h3>
+    <h3 class="title">IssueList: ({{nodes.length}})</h3>
     <PostListItem
       v-for="post in nodes"
       :key="post.id"
