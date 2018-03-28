@@ -29,7 +29,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$header-height: 2rem;
+$header-height: 2.5rem;
 
 .header {
   position: fixed;
