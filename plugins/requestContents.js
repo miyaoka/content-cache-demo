@@ -4,7 +4,6 @@ export default async ({ app, store }, inject) => {
   let loaded = false
 
   const getData = async () => {
-    console.log('getData')
     if (loaded) return data
     try {
       data = (await app.$axios.get('/_nuxt/contents.json')).data
