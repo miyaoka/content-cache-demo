@@ -28,6 +28,8 @@
 <script>
 import PostItem from '~/components/PostItem.vue'
 
+let watchHandler
+
 export default {
   components: {
     PostItem
@@ -44,6 +46,19 @@ export default {
       data,
       next
     }
+  },
+  mounted() {
+    watchHandler = this.$store.watch(this.$store.getters.key, (key) => {
+      console.log(key)
+      const target = key.key === 'ArrowLeft' ? this.prev : this.next
+      if (target) {
+        $nuxt.$router.push({ name: 'posts-id', params: { id: target.number } })
+      }
+    })
+  },
+  destroyed() {
+    // remove watch handler
+    watchHandler()
   }
 }
 </script>

@@ -1,19 +1,14 @@
 export const state = () => ({
-  contents: []
+  key: { key: null, d: null }
 })
 export const getters = {
-  getByNumber: (state) => (num) => {
-    const i = state.contents.findIndex((item) => item.number === num)
-    return {
-      data: state.contents[i],
-      prev: state.contents[i - 1],
-      next: state.contents[i + 1]
-    }
-  }
+  key: (state) => () => state.key
 }
 export const mutations = {
-  setContents(state, payload) {
-    console.log('store')
-    state.contents = payload
+  setKey(state, payload) {
+    state.key = {
+      key: payload,
+      d: new Date()
+    }
   }
 }
