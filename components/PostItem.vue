@@ -1,12 +1,7 @@
 <template>
   <article class="postItem">
     <header>
-      <h2 class="title"><nuxt-link :to="{
-        name: 'posts-id',
-        params: {
-          id: post.number
-        }
-      }">{{post.title}}</nuxt-link></h2>
+      <h2 class="title">{{post.title}}</h2>
       <a
         :href="post.url"
         target="_blank"
