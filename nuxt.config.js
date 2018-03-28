@@ -1,6 +1,10 @@
+const headTitle = 'Contents cache demo'
+const headDesc = 'API cache on build'
+
 module.exports = {
   modules: [
     '@nuxtjs/dotenv',
+    '@nuxtjs/pwa',
     '~/modules/contents',
     ['nuxt-sass-resources-loader', ['~/assets/css/_vars.scss']]
   ],
@@ -9,13 +13,19 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'content-cache-demo',
+    title: headTitle,
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Nuxt.js project' }
+      { hid: 'description', name: 'description', content: headDesc }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+  },
+  manifest: {
+    name: headTitle,
+    short_name: 'cachedemo',
+    description: headDesc,
+    lang: 'ja'
   },
   /*
   ** Customize the progress bar color

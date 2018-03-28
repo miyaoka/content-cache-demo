@@ -15,6 +15,7 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.1.1",
     "@nuxtjs/dotenv": "^1.1.1",
+    "@nuxtjs/pwa": "^2.0.8",
     "apollo-fetch": "^0.7.0",
     "apollo-link-http": "^1.5.3",
     "express": "^4.16.3",
