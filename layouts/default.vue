@@ -41,6 +41,6 @@ $header-height: 2rem;
 }
 .main {
   margin: 1rem;
-  margin-top: calc(2rem + #{$header-height};
+  margin-top: calc(2rem + #{$header-height});
 }
 </style>
