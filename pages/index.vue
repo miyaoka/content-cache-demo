@@ -12,7 +12,6 @@
 
 <script>
 import PostListItem from '~/components/PostListItem.vue'
-import getIssues from '~/apollo/queries/getIssues'
 
 export default {
   components: {

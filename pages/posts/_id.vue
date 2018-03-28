@@ -27,7 +27,6 @@
 
 <script>
 import PostItem from '~/components/PostItem.vue'
-import getIssue from '~/apollo/queries/getIssue'
 
 export default {
   components: {

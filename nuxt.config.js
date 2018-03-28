@@ -1,16 +1,10 @@
 module.exports = {
   modules: [
-    '@nuxtjs/apollo',
     '@nuxtjs/dotenv',
     '~/modules/contents',
     ['nuxt-sass-resources-loader', ['~/assets/css/_vars.scss']]
   ],
   css: ['~/assets/css/base.scss'],
-  apollo: {
-    clientConfigs: {
-      default: '~/apollo/client-configs/default.js'
-    }
-  },
   /*
   ** Headers of the page
   */
