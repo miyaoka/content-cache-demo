@@ -1,23 +1,26 @@
 <template>
   <div>
-    <nuxt-link
-      v-if="prev"
-      :to="{
-        name: 'posts-id',
-        params: {
-          id: prev.number
-        }
-      }"
-    >prev</nuxt-link>
-    <nuxt-link
-      v-if="next"
-      :to="{
-        name: 'posts-id',
-        params: {
-          id: next.number
-        }
-      }"
-    >next</nuxt-link>
+    <nav class="prev-next">
+      <nuxt-link
+        v-if="prev"
+        :to="{
+          name: 'posts-id',
+          params: {
+            id: prev.number
+          }
+        }"
+      >prev</nuxt-link>
+      <nuxt-link
+        v-if="next"
+        class="next"
+        :to="{
+          name: 'posts-id',
+          params: {
+            id: next.number
+          }
+        }"
+      >next</nuxt-link>
+    </nav>
     <h3 class="title">Post</h3>
     <PostItem
       :post="data"
@@ -66,5 +69,12 @@ export default {
 <style lang="scss" scoped>
 .title {
   text-align: center;
+}
+.prev-next {
+  display: flex;
+  justify-content: space-between;
+  .next {
+    margin-left: auto;
+  }
 }
 </style>
