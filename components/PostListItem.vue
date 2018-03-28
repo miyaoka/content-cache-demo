@@ -5,7 +5,7 @@
       params: {
         id: post.number
       }
-    }">{{post.title}}</nuxt-link>
+    }">[{{post.number}}] {{post.title}}</nuxt-link>
   </article>
 </template>
 
