@@ -19,7 +19,6 @@ export default {
   },
   async asyncData({ app, payload, store }) {
     if (payload) return { nodes: payload }
-    console.log('index: nopayload')
 
     const nodes = await app.$contents.getAll()
     return {

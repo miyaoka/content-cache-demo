@@ -39,7 +39,6 @@ export default {
   },
   async asyncData({ app, payload, store, params }) {
     if (payload) return payload
-    console.log('id: nopayload')
 
     const { prev, data, next } = await app.$contents.getByNumber(
       Number(params.id)
@@ -52,7 +51,6 @@ export default {
   },
   mounted() {
     watchHandler = this.$store.watch(this.$store.getters.key, (key) => {
-      console.log(key)
       const target = key.key === 'ArrowLeft' ? this.prev : this.next
       if (target) {
         $nuxt.$router.push({ name: 'posts-id', params: { id: target.number } })
