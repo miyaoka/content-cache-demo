@@ -107,17 +107,15 @@ module.exports = async function contentsModule(moduleOptions) {
     if (isStatic) {
       // Add content API when running `nuxt generate`
       this.nuxt.hook('build:done', (generator) => {
-        if (isStatic) {
-          console.log('opening server connection')
-          const app = express()
-          app.use(express.static('dist'))
-          const server = app.listen(process.env.PORT || 3000)
+        console.log('opening server connection')
+        const app = express()
+        app.use(express.static('dist'))
+        const server = app.listen(process.env.PORT || 3000)
 
-          this.nuxt.hook('generate:done', () => {
-            console.log('closing server connection')
-            server.close()
-          })
-        }
+        this.nuxt.hook('generate:done', () => {
+          console.log('closing server connection')
+          server.close()
+        })
       })
     }
 
