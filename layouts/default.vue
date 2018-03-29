@@ -19,7 +19,9 @@ export default {
   },
   methods: {
     onKeyDown(e) {
-      const target = e.key === 'ArrowLeft' || 'ArrowRight' ? e.key : null
+      const target =
+        e.key === 'ArrowLeft' || e.key === 'ArrowRight' ? e.key : null
+      console.log(target)
       if (target) {
         this.$store.commit('setKey', target)
       }
