@@ -1,13 +1,10 @@
 query getIssues(
   $repoOwner: String!
   $repoName: String!
-  $fetchCommentsPerIssue: Int = 0
   $fetchIssuePerPage: Int = 5
   $endCursor: String
 ) {
   repository(owner: $repoOwner, name: $repoName) {
-    name
-    description
     issues(
       orderBy: { field: CREATED_AT, direction: DESC }
       first: $fetchIssuePerPage
@@ -19,32 +16,11 @@ query getIssues(
         hasNextPage
       }
       nodes {
-        author {
-          avatarUrl
-          login
-          resourcePath
-          url
-        }
         id
         number
         title
         body
-        createdAt
-        updatedAt
         url
-        comments(last: $fetchCommentsPerIssue) {
-          totalCount
-          nodes {
-            author {
-              avatarUrl
-              login
-              resourcePath
-              url
-            }
-            id
-            url
-          }
-        }
       }
     }
   }
