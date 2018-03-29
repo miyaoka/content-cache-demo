@@ -1,6 +1,6 @@
 # content-cache-demo
 
-> NuxtMeetup#1 用のデモ
+> [NuxtMeetup#1](https://nuxt-meetup.connpass.com/event/82578/) 用のデモ
 
 - 発表スライド：http://slides.com/masayakazama/nuxt-generate
 - デモサイト：https://miyaoka-content-cache-demo.netlify.com/
