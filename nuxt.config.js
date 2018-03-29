@@ -5,8 +5,8 @@ module.exports = {
   modules: [
     '@nuxtjs/dotenv',
     '@nuxtjs/pwa',
-    '~/modules/contents',
-    ['nuxt-sass-resources-loader', ['~/assets/css/_vars.scss']]
+    '~/modules/contents'
+    // ['nuxt-sass-resources-loader', ['~/assets/css/_vars.scss']]
   ],
   css: ['~/assets/css/base.scss'],
   /*

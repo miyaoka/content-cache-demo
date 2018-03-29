@@ -38,6 +38,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '~assets/css/_vars.scss';
+
 .postItem {
   border: 1px solid $clr-b;
   border-radius: 1rem;
