@@ -1,6 +1,9 @@
 # content-cache-demo
 
-> Content cache demo
+> NuxtMeetup#1 用のデモ
+
+- 発表スライド：http://slides.com/masayakazama/nuxt-generate
+- デモサイト：https://miyaoka-content-cache-demo.netlify.com/
 
 ## Build Setup
 
