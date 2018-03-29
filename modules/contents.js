@@ -99,6 +99,10 @@ module.exports = async function contentsModule(moduleOptions) {
   this.nuxt.hook('build:before', (builder) => {
     console.log('starting build content')
     const isStatic = builder.isStatic
+    this.options.head.link.push({
+      rel: 'prefetch',
+      href: `/_nuxt/${options.path}`
+    })
 
     if (isStatic) {
       // Add content API when running `nuxt generate`
