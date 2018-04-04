@@ -13,26 +13,26 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
-    "@nuxtjs/axios": "^5.1.1",
+    "@nuxtjs/axios": "^5.3.1",
     "@nuxtjs/dotenv": "^1.1.1",
     "@nuxtjs/pwa": "^2.0.8",
     "apollo-fetch": "^0.7.0",
     "apollo-link-http": "^1.5.3",
     "express": "^4.16.3",
-    "nuxt": "^1.4.0",
-    "nuxt-sass-resources-loader": "^1.2.0",
+    "nuxt-edge": "^2.0.0-25379389.e4593e2",
+    "nuxt-sass-resources-loader": "^2.0.0",
     "vue-markdown": "^2.2.4"
   },
   "devDependencies": {
-    "ajv": "^6.3.0",
+    "ajv": "^6.4.0",
     "babel-eslint": "^8.2.2",
-    "eslint": "^4.19.0",
+    "eslint": "^4.19.1",
     "eslint-friendly-formatter": "^4.0.0",
     "eslint-loader": "^2.0.0",
-    "eslint-plugin-vue": "^4.3.0",
+    "eslint-plugin-vue": "^4.4.0",
     "graphql": "^0.13.2",
     "graphql-tag": "^2.8.0",
-    "node-sass": "^4.7.2",
+    "node-sass": "^4.8.3",
     "sass-loader": "^6.0.7"
   }
 }
