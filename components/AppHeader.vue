@@ -18,8 +18,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '~assets/css/_vars.scss';
-
 header {
   background: $clr-w-d;
   a {
