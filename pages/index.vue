@@ -23,7 +23,7 @@
 <script>
 import PostListItem from '~/components/PostListItem.vue'
 
-const perPage = 50
+const perPage = 200
 let limit = perPage
 
 export default {
