@@ -40,13 +40,13 @@ export default {
   async asyncData({ app, payload, store, params }) {
     if (payload) return payload
 
-    const { prev, data, next } = await app.$contents.getByNumber(
-      Number(params.id)
-    )
+    const d = await app.$contents.getData()
+    const num = Number(params.id)
+    const i = d.findIndex((item) => item.number === num)
     return {
-      prev,
-      data,
-      next
+      data: d[i],
+      prev: d[i - 1],
+      next: d[i + 1]
     }
   },
   mounted() {

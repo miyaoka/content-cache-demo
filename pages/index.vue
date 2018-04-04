@@ -31,7 +31,7 @@ export default {
     PostListItem
   },
   async asyncData({ app, payload, store }) {
-    const allNodes = (payload ? payload : await app.$contents.getAll()).map(
+    const allNodes = (payload ? payload : await app.$contents.getData()).map(
       (n) => ({ id: n.id, title: n.title, number: n.number })
     )
     return {
@@ -41,7 +41,7 @@ export default {
   },
   methods: {
     async loadMore($state) {
-      const allNodes = await this.$contents.getAll()
+      const allNodes = await this.$contents.getData()
       limit += perPage
       this.nodes = allNodes.slice(0, limit)
       limit < allNodes.length ? $state.loaded() : $state.complete()

@@ -9,7 +9,8 @@ const query = fs.readFileSync(
   'utf8'
 )
 const defaultOptions = {
-  path: 'contents.json'
+  path: 'contents.json',
+  injectName: 'contents'
 }
 
 const apolloFetch = createApolloFetch({
@@ -58,7 +59,8 @@ module.exports = async function contentsModule(moduleOptions) {
   const options = {
     ...defaultOptions,
     ...this.options.contents,
-    ...moduleOptions
+    ...moduleOptions,
+    publicPath: this.options.build.publicPath
   }
 
   const contents = await fetchContents()
@@ -101,7 +103,7 @@ module.exports = async function contentsModule(moduleOptions) {
     const isStatic = builder.isStatic
     this.options.head.link.push({
       rel: 'prefetch',
-      href: `/_nuxt/${options.path}`
+      href: `${this.options.build.publicPath}${options.path}`
     })
 
     if (isStatic) {
