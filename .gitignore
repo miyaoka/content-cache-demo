@@ -10,6 +10,7 @@ yarn-error.log
 
 # generate
 dist
+storybook-static
 
 # env
 .env
