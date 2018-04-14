@@ -5,16 +5,7 @@
 </template>
 
 <script>
-export default {
-  computed: {
-    repoOwner() {
-      return process.env.GH_REPO_OWNER
-    },
-    repoName() {
-      return process.env.GH_REPO_NAME
-    }
-  }
-}
+export default {}
 </script>
 
 <style lang="scss" scoped>
