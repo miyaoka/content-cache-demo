@@ -2,6 +2,7 @@ const headTitle = 'Contents cache demo'
 const headDesc = 'API cache on build'
 
 module.exports = {
+  srcDir: 'src/',
   plugins: ['~/plugins/infinite-loading.js'],
   modules: [
     '@nuxtjs/dotenv',
